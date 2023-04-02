@@ -18,4 +18,14 @@ public class Cat extends Animal {
     public void swim(int swimLength) {
         System.out.println(name + " не умеет плавать");
     }
+
+    @Override
+    public boolean isCat() {
+        return true;
+    }
+
+    @Override
+    public boolean isDog() {
+        return false;
+    }
 }

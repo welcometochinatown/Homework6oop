@@ -22,4 +22,14 @@ public class Dog extends Animal {
             System.out.println(name + " может проплыть только 10м");
         }
     }
+
+    @Override
+    public boolean isDog() {
+        return true;
+    }
+
+    @Override
+    public boolean isCat() {
+        return false;
+    }
 }

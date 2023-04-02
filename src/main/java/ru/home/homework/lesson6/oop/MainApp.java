@@ -21,15 +21,39 @@ public class MainApp {
         // Вариант №1
         Animal[] animal = {
                 new Cat("Barsik"),
+                new Cat("Barsik"),
+                new Cat("Barsik"),
+                new Cat("Barsik"),
+                new Dog("Bobik"),
+                new Dog("Bobik"),
+                new Dog("Bobik"),
                 new Dog("Bobik"),
                 new Cat("Murzik")
         };
 
-        for (Animal a: animal) {
+        for (Animal a : animal) {
             a.run(150);
             a.swim(5);
         }
+        System.out.println();
 
+        int animalCount = 0;
+        int catCount = 0;
+        int dogCount = 0;
+        for (Animal a : animal) {
+            if (a.isAnimal()) {
+                animalCount++;
+            }
+            if (a.isCat()) {
+                catCount++;
+            }
+            if (a.isDog()) {
+                dogCount++;
+            }
+        }
+        System.out.println("Количество животных: " + animalCount);
+        System.out.println("Количество котов: " + catCount);
+        System.out.println("Количество собак: " + dogCount);
         System.out.println();
 
         // Вариант №2
