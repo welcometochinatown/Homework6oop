@@ -1,9 +1,6 @@
 package ru.home.homework.lesson6.oop.animals;
 
 public class Dog extends Animal {
-    private int runLength;
-    private int swimLength;
-
     public Dog(String name) {
         this.name = name;
     }
@@ -19,8 +16,8 @@ public class Dog extends Animal {
 
     @Override
     public void swim(int swimLength) {
-        if (runLength > 0 && runLength <= 10) {
-            System.out.println(name + " проплыл " + runLength + " м.");
+        if (swimLength > 0 && swimLength <= 10) {
+            System.out.println(name + " проплыл " + swimLength + " м.");
         } else {
             System.out.println(name + " может проплыть только 10м");
         }
