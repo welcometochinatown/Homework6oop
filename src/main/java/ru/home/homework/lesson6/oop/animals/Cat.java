@@ -2,6 +2,7 @@ package ru.home.homework.lesson6.oop.animals;
 
 public class Cat extends Animal {
     private int runLength;
+    private int swimLength;
 
     public Cat(String name) {
         this.name = name;
@@ -17,7 +18,7 @@ public class Cat extends Animal {
     }
 
     @Override
-    public void swim(int runLength) {
+    public void swim(int swimLength) {
         System.out.println(name + " не умеет плавать");
     }
 }

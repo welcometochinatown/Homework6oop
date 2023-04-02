@@ -2,11 +2,11 @@ package ru.home.homework.lesson6.oop.animals;
 
 public class Dog extends Animal {
     private int runLength;
+    private int swimLength;
 
     public Dog(String name) {
         this.name = name;
     }
-
 
     @Override
     public void run(int runLength) {
@@ -18,7 +18,7 @@ public class Dog extends Animal {
     }
 
     @Override
-    public void swim(int runLength) {
+    public void swim(int swimLength) {
         if (runLength > 0 && runLength <= 10) {
             System.out.println(name + " проплыл " + runLength + " м.");
         } else {
