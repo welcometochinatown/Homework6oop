@@ -1,8 +1,15 @@
 package ru.home.homework.lesson6.oop.animals;
 
 public class Dog extends Animal {
+    private static int dogCount;
+
     public Dog(String name) {
-        this.name = name;
+        super(name);
+        dogCount++;
+    }
+
+    public static int getDogCount() {
+        return dogCount;
     }
 
     @Override

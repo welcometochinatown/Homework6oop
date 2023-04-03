@@ -46,12 +46,22 @@ public class MainApp {
         cat.swim(50);
         dog.run(150);
         dog.swim(5);
+        System.out.println();
+
+        System.out.println("==========================================");
+        System.out.println();
+
+        // Вывод решение через static
+        System.out.println("ВСЕГО ЖИВОТНЫХ : " + (Cat.getCatCount() + Dog.getDogCount()));
+        System.out.println("ВСЕГО КОТОВ : " + Cat.getCatCount());
+        System.out.println("ВСЕГО СОБАК : " + Dog.getDogCount());
     }
+
     public static void animalsCount(Animal[] animal) {
         int animalCount = 0;
         int catCount = 0;
         int dogCount = 0;
-        for (Animal a: animal) {
+        for (Animal a : animal) {
             if (a instanceof Cat) {
                 catCount++;
             }
@@ -60,9 +70,9 @@ public class MainApp {
             }
             animalCount++;
         }
-        System.out.println("Количество животных: " + animalCount);
-        System.out.println("Количество котов: " + catCount);
-        System.out.println("Количество собак: " + dogCount);
+        System.out.println("Количество животных в массиве животных: " + animalCount);
+        System.out.println("Количество котов в массиве животных: " + catCount);
+        System.out.println("Количество собак в массиве животных: " + dogCount);
         System.out.println();
     }
 }
