@@ -6,12 +6,4 @@ public abstract class Animal {
     public abstract void run(int runLength);
 
     public abstract void swim(int swimLength);
-
-    public boolean isAnimal() {
-        return true;
-    }
-
-    public abstract boolean isCat();
-
-    public abstract boolean isDog();
 }

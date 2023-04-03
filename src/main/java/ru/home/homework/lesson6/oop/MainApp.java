@@ -5,6 +5,7 @@ import ru.home.homework.lesson6.oop.animals.Cat;
 import ru.home.homework.lesson6.oop.animals.Dog;
 
 public class MainApp {
+    public static Animal[] animal;
     public static void main(String[] args) {
         /*
         1. Создать классы Собака и Кот с наследованием от класса Животное.
@@ -20,15 +21,15 @@ public class MainApp {
 
         // Вариант №1
         Animal[] animal = {
-                new Cat("Barsik"),
-                new Cat("Barsik"),
-                new Cat("Barsik"),
-                new Cat("Barsik"),
-                new Dog("Bobik"),
-                new Dog("Bobik"),
-                new Dog("Bobik"),
-                new Dog("Bobik"),
-                new Cat("Murzik")
+                new Cat("Барсик"),
+                new Cat("Васька"),
+                new Cat("Тимка"),
+                new Cat("Санька"),
+                new Dog("Бобик"),
+                new Dog("Тузик"),
+                new Dog("Рекс"),
+                new Dog("Стрелка"),
+                new Cat("Дымок")
         };
 
         for (Animal a : animal) {
@@ -36,33 +37,33 @@ public class MainApp {
             a.swim(5);
         }
         System.out.println();
-
-        int animalCount = 0;
-        int catCount = 0;
-        int dogCount = 0;
-        for (Animal a : animal) {
-            if (a.isAnimal()) {
-                animalCount++;
-            }
-            if (a.isCat()) {
-                catCount++;
-            }
-            if (a.isDog()) {
-                dogCount++;
-            }
-        }
-        System.out.println("Количество животных: " + animalCount);
-        System.out.println("Количество котов: " + catCount);
-        System.out.println("Количество собак: " + dogCount);
-        System.out.println();
+        animalsCount(animal);
 
         // Вариант №2
-        Cat cat = new Cat("Smoke");
-        Dog dog = new Dog("Rex");
+        Cat cat = new Cat("Дымок");
+        Dog dog = new Dog("Рекс");
 
         cat.run(150);
         cat.swim(50);
         dog.run(150);
         dog.swim(5);
+    }
+    public static void animalsCount(Animal[] animal) {
+        int animalCount = 0;
+        int catCount = 0;
+        int dogCount = 0;
+        for (Animal a: animal) {
+            if (a instanceof Cat) {
+                catCount++;
+            }
+            if (a instanceof Dog) {
+                dogCount++;
+            }
+            animalCount++;
+        }
+        System.out.println("Количество животных: " + animalCount);
+        System.out.println("Количество котов: " + catCount);
+        System.out.println("Количество собак: " + dogCount);
+        System.out.println();
     }
 }
