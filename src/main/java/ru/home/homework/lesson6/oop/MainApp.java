@@ -51,7 +51,7 @@ public class MainApp {
         System.out.println("==========================================");
         System.out.println();
 
-        // Вывод решение через static
+        // Вывод решения через static
         System.out.println("ВСЕГО ЖИВОТНЫХ : " + (Cat.getCatCount() + Dog.getDogCount()));
         System.out.println("ВСЕГО КОТОВ : " + Cat.getCatCount());
         System.out.println("ВСЕГО СОБАК : " + Dog.getDogCount());
