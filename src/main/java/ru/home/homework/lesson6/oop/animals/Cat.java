@@ -8,7 +8,7 @@ public class Cat extends Animal {
         catCount++;
     }
 
-    public static int getCatCount() {
+    public static int getCount() {
         return catCount;
     }
 
