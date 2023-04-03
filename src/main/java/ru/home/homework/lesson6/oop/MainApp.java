@@ -5,7 +5,6 @@ import ru.home.homework.lesson6.oop.animals.Cat;
 import ru.home.homework.lesson6.oop.animals.Dog;
 
 public class MainApp {
-    public static Animal[] animal;
     public static void main(String[] args) {
         /*
         1. Создать классы Собака и Кот с наследованием от класса Животное.
